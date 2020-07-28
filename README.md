@@ -2,4 +2,4 @@
 
 ## react
 
-[React 组件编写规范、bad 示例](https://github.com/dushop/sharing/react/React 组件编写规范、bad 示例.md)
+[React 组件编写规范、bad 示例](https://github.com/dushop/sharing/react/React组件编写规范、bad 示例.md)
