@@ -1,23 +1,23 @@
-# Base Component
+# React Base Component 示例
 ```ts
 interface Props {
-  name: number;
+  username: number;
 }
 interface State {
-  name: number;
+  username: number;
 }
 class A extends React.Component<Props, State> {
   static defaultProps = {
-    name: 0
+    username: 0
   };
   public state: State = {
-    name: 0
+    username: 0
   }
   // or
   public constructor(props: Props) {
     super(props);
     this.state: State = {
-      name: 0
+      username: 0
     }
   }
   // autobind
@@ -37,18 +37,16 @@ class A extends React.Component<Props, State> {
 }
 ```
 
-# Function Component
+# Function Component 示例
 
 ```ts
 // bad
-const A = (props: Props) => xxx
+const Header = (props: Props) => xxx
 // =>
-function A(props: Props) {
+function Header(props: Props) {
 
 }
 
-// <Unknown>
-// </Unknown>
 ```
 
 # 生命周期
@@ -56,12 +54,12 @@ function A(props: Props) {
 ```ts
 // bad
 this.setState({
-  name: this.state.name + 1
+  index: this.state.index + 1
 });
 // =>
 this.setState(
   (prevState: State) => ({
-    name: prevState.name + 1
+    index: prevState.index + 1
   })
 );
 
@@ -114,7 +112,7 @@ function handleClick(event) {
 const MyComponent = () => (
   <div>
     <OtherComponent type="a" className="colorful" foo={123} bar={456} />
-    <OtherComponent type="b" className="colorful" foo={123} bar={456} />    
+    <OtherComponent type="b" className="colorful" foo={123} bar={456} />
   </div>
 );
 
